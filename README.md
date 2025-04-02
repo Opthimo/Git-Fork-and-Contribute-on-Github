@@ -1,51 +1,44 @@
 <!---
 {
   "depends_on": [],
-  "author": "Stephan Bökelmann",
-  "first_used": "2025-03-17",
-  "keywords": ["learning", "exercises", "education", "practice"]
+  "author": "Tabea Röthemeyer",
+  "first_used": "2025-04-02",
+  "keywords": ["learning", "exercises", "github", "git"]
 }
 --->
 
-# Learning Through Exercises
+# Git: Fork and Contribute on Github
 
 ## 1) Introduction
-Learning by doing is one of the most effective methods to acquire new knowledge and skills. Rather than passively consuming information, actively engaging in problem-solving fosters deeper understanding and long-term retention. By working through structured exercises, students can grasp complex concepts in a more intuitive and applicable way. This approach is particularly beneficial in technical fields like programming, mathematics, and engineering.
+When developers want to share their projects, they use platforms designed specifically for collaboration, similar to social networks but specialized for code. GitHub is one prominent example that hosts and manages Git repositories. Besides hosting repositories, GitHub adds features like issues, project management, and pull requests.
 
+To contribute code, developers commonly use a pullrequest, a structured suggestion to include code changes into another repository. A pullrequest specifies two branches, the one with the new changes and the one where the changes should be merged to. It also serves as an option to give feedback to code.
+
+Since contributors often lack permissions to directly push branches to repositories they don't own, GitHub provides forks. A fork is your own personal copy of another repository. This enables you to freely make changes and then submit these changes back to the original repository via pull requests. This is possible as the target branch of a pull request can belong to another repository.
 ### 1.1) Further Readings and Other Sources
-- [The Importance of Practice in Learning](https://www.sciencedirect.com/science/article/pii/S036013151300062X)
-- "The Art of Learning" by Josh Waitzkin
-- [How to Learn Effectively: 5 Key Strategies](https://www.edutopia.org/article/5-research-backed-learning-strategies)
+- [Where do I start with Git and GitHub](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git#where-do-i-start)
+- [About Git and GitHub](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git)
+- [Reddit discussion: Why is GitHub so important](https://www.reddit.com/r/learnprogramming/comments/wg463w/why_is_github_so_important/)
 
 ## 2) Tasks
-1. **Write a Summary**: Summarize the concept of "learning by doing" in 3-5 sentences.
-2. **Example Identification**: List three examples from your own experience where learning through exercises helped you understand a topic better.
-3. **Create an Exercise**: Design a simple exercise for a topic of your choice that someone else could use to practice.
-4. **Follow an Exercise**: Find an online tutorial that includes exercises and complete at least two of them.
-5. **Modify an Existing Exercise**: Take a basic problem from a textbook or online course and modify it to make it slightly more challenging.
-6. **Pair Learning**: Explain a concept to a partner and guide them through an exercise without giving direct answers.
-7. **Review Mistakes**: Look at an exercise you've previously completed incorrectly. Identify why the mistake happened and how to prevent it in the future.
-8. **Time Challenge**: Set a timer for 10 minutes and try to solve as many simple exercises as possible on a given topic.
-9. **Self-Assessment**: Create a checklist to evaluate your own performance in completing exercises effectively.
-10. **Reflect on Progress**: Write a short paragraph on how this structured approach to exercises has influenced your learning.
+1. **Visit the VSCode Project on GitHub**: [VSCode on GitHub](https://github.com/microsoft/vscode) -> Take some time to browse the project and find out how GitHub lets you navigate different branches.
+2. **Create your own project**: Upload a local Git repository to GitHub
+3. **Create a Pullrequest in your own project**: Make sure that you have two different branches in your project and push them. Then, create a Pullrequest and inspect the changes. You can already merge it or ask someone else to review it.
+4. **Protect your project**: Add branch protection rules so that only you (or maybe your friends as well) are allowed to push to your main branch.
+5. **Contribute to this description**: Whilst this exercise is created with care, you might still find room for improvement. Fork this repository, make an edit that you would find useful, and create a Pullrequest. 
 
 <details>
-  <summary>Tip for Task 5</summary>
-  Try making small adjustments first, such as increasing the difficulty slightly or adding an extra constraint.
+  <summary>Tip for Task 2</summary>
+  There are multiple ways to accomplish this. GitHub already provides a lot of explanation. Just navigate to the "your repositories" View once logged in and click the new button. GitHub's UI will help you to either upload an existing project or create a new one.
+   <summary>Tip for Task 5</summary>
+  This is a very small example that highlights the general process of how you can contribute to other projects.
 </details>
 
 ## 3) Questions
-1. What are the main benefits of learning through exercises compared to passive learning?
-2. How do exercises improve long-term retention?
-3. Can you think of a subject where learning through exercises might be less effective? Why?
-4. What role does feedback play in learning through exercises?
-5. How can self-designed exercises improve understanding?
-6. Why is it beneficial to review past mistakes in exercises?
-7. How does explaining a concept to someone else reinforce your own understanding?
-8. What strategies can you use to stay motivated when practicing with exercises?
-9. How can timed challenges contribute to learning efficiency?
-10. How do exercises help bridge the gap between theory and practical application?
+1. Why would you fork a project instead of contributing directly?
+2. What different kinds of branch protection rules exist?
+3. Look at the Pullrequest interfaces in GitHub and describe what kind of checks you can find - there are two categories of checks. 
 
 ## 4) Advice
-Practice consistently and seek out diverse exercises that challenge different aspects of a topic. Combine exercises with reflection and feedback to maximize your learning efficiency. Don't hesitate to adapt exercises to fit your own needs and ensure that you're actively engaging with the material, rather than just going through the motions.
+While GitHub is commonly used, GitLab is also quite popular (and your university might provide you with a self-hosted option). When trying to understand GIt and GitHub, always think about what is Git and what is GitHub. Anything that can't be accomplished by doing `git <command> [whatever]` is most likely a GitHub feature. 
 
