@@ -1,7 +1,7 @@
 <!---
 {
   "depends_on": [],
-  "author": "Tabea Röthemeyer",
+  "author": ["Tabea Röthemeyer","Stephan Bökelmann"],
   "first_used": "2025-04-02",
   "keywords": ["learning", "exercises", "github", "git"]
 }
@@ -10,35 +10,126 @@
 # Git: Fork and Contribute on Github
 
 ## 1) Introduction
-When developers want to share their projects, they use platforms designed specifically for collaboration, similar to social networks but specialized for code. GitHub is one prominent example that hosts and manages Git repositories. Besides hosting repositories, GitHub adds features like issues, project management, and pull requests.
+When developers want to share their projects, they use platforms designed specifically for collaboration — similar to social networks, but specialized for code. **GitHub** is one of the most prominent examples: it hosts and manages Git repositories, while also providing tools for version control, collaboration, and community building. GitHub adds layers of functionality on top of Git, such as issue tracking, wikis, project boards, and — most importantly — **pull requests**.
 
-To contribute code, developers commonly use a pullrequest, a structured suggestion to include code changes into another repository. A pullrequest specifies two branches, the one with the new changes and the one where the changes should be merged to. It also serves as an option to give feedback to code.
+Pull requests are at the heart of collaborative development. They allow developers to propose changes, discuss them, request reviews, and eventually merge them into a mainline branch. A pull request ties two branches together: the source (with the proposed changes) and the target (where the changes should go). In this way, GitHub structures not only the flow of code, but also the communication around it.
 
-Since contributors often lack permissions to directly push branches to repositories they don't own, GitHub provides forks. A fork is your own personal copy of another repository. This enables you to freely make changes and then submit these changes back to the original repository via pull requests. This is possible as the target branch of a pull request can belong to another repository.
+But what happens when you don’t have write access to the original repository?
+
+This is where **forks** come in. A fork is your **personal copy** of another user's repository — one that lives under your own account. You can modify it freely, create branches, commit changes, and push code just like any other Git repo. And once you're ready, you can open a **pull request** from your fork back to the original repository, proposing that your changes be included.
+
+Forking is a core concept in open source workflows. It allows global collaboration without compromising repository integrity. The original repository remains protected, while contributors can still share improvements, bugfixes, or experiments.
+
+Behind the scenes, a fork is simply a full Git clone — but hosted on GitHub and linked to the original repository. This "social fork" relationship enables features like pull requests across repositories, comparisons, and visibility into shared contributions.
+
+In essence, GitHub turns Git's decentralized architecture into a global collaborative ecosystem — one where anyone can fork, contribute, and participate, even without explicit access rights.
+
 ### 1.1) Further Readings and Other Sources
 - [Where do I start with Git and GitHub](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git#where-do-i-start)
 - [About Git and GitHub](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git)
 - [Reddit discussion: Why is GitHub so important](https://www.reddit.com/r/learnprogramming/comments/wg463w/why_is_github_so_important/)
+- Talk: *The Future of Programming* by Bret Victor — philosophical context on collaboration and tooling.
+- [GitHub Docs: About forks](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
 ## 2) Tasks
-1. **Visit the VSCode Project on GitHub**: [VSCode on GitHub](https://github.com/microsoft/vscode) -> Take some time to browse the project and find out how GitHub lets you navigate different branches.
-2. **Create your own project**: Upload a local Git repository to GitHub
-3. **Create a Pullrequest in your own project**: Make sure that you have two different branches in your project and push them. Then, create a Pullrequest and inspect the changes. You can already merge it or ask someone else to review it.
-4. **Protect your project**: Add branch protection rules so that only you (or maybe your friends as well) are allowed to push to your main branch.
-5. **Contribute to this description**: Whilst this exercise is created with care, you might still find room for improvement. Fork this repository, make an edit that you would find useful, and create a Pullrequest. 
 
-<details>
-  <summary>Tip for Task 2</summary>
-  There are multiple ways to accomplish this. GitHub already provides a lot of explanation. Just navigate to the "your repositories" View once logged in and click the new button. GitHub's UI will help you to either upload an existing project or create a new one.
-   <summary>Tip for Task 5</summary>
-  This is a very small example that highlights the general process of how you can contribute to other projects.
-</details>
+1. **Explore the STEMgraph Organization on GitHub**  
+   Visit the public repositories of the STEMgraph organization:  
+   👉 [https://github.com/STEMgraph/repositories](https://github.com/STEMgraph/repositories)  
+   Browse the available projects and pick one that:
+   - contains a small bug (e.g. a typo or logical mistake),
+   - could benefit from an enhancement (e.g. clearer instructions or additional explanation), or
+   - is missing something (e.g. a README section or link).
+
+   **Tip**: Focus on repositories that contain Markdown exercises, as these are ideal for first contributions.
+
+2. **Fork the Repository to Your GitHub Account**  
+   - Open the chosen repository in your browser.
+   - Click the **“Fork”** button in the upper-right corner.
+   - GitHub will create a full copy of the repository under your username.
+
+   ⚠️ This fork is now *your own remote* version of the project — you can push to it freely.
+
+3. **Clone the Fork Locally**  
+   On your computer, run the following (replace `<your-username>` and `<repo-name>` accordingly):
+   ```bash
+   git clone git@github.com:<your-username>/<repo-name>.git
+   cd <repo-name>
+   ```
+
+4. **Create a New Branch for Your Changes**  
+   It's best practice not to work directly on the `main` or `master` branch:
+   ```bash
+   git checkout -b improve-exercise
+   ```
+
+5. **Make Your Edits and Commit Them**  
+   - Edit files as needed (e.g. fix typos, clarify instructions, improve formatting).
+   - Stage and commit your changes:
+     ```bash
+     git add .
+     git commit -m "Fix typos and improve clarity in exercise"
+     ```
+
+6. **Push the Branch to Your Fork**  
+   ```bash
+   git push origin improve-exercise
+   ```
+
+7. **Create a Pull Request (PR) to the Original Repository**  
+   - Navigate to your fork on GitHub.
+   - GitHub will usually show a banner offering to create a **Pull Request** — click the button `Compare & pull request`.
+   - In the PR form:
+     - Provide a clear title (e.g. "Improved instructions in README").
+     - In the description, briefly explain what you changed and why.
+     - Be polite and concise.
+
+   Example:
+   > Hello,  
+   > I made a few improvements to the exercise text to fix grammar and make some instructions easier to follow. I hope this helps future readers!  
+   > Best,  
+   > *Your Name*
+
+8. **Wait for Feedback or Merge**  
+   Maintainers of the upstream project might:
+   - Accept your PR and merge it directly,
+   - Request changes or give feedback,
+   - Or explain why they might not merge it.
+
+   That’s normal — contributing is also about communication.
+
+
+
+**Optional (Advanced)**: After your PR has been merged, you can [configure the upstream remote](https://docs.github.com/en/get-started/quickstart/fork-a-repo#syncing-your-fork) to keep your fork in sync:
+```bash
+git remote add upstream https://github.com/STEMgraph/<repo-name>.git
+git fetch upstream
+git merge upstream/main
+```
 
 ## 3) Questions
-1. Why would you fork a project instead of contributing directly?
-2. What different kinds of branch protection rules exist?
-3. Look at the Pullrequest interfaces in GitHub and describe what kind of checks you can find - there are two categories of checks. 
+
+1. **What is the difference between a GitHub fork and a local Git clone?**  
+   Hint: Think about ownership, visibility, and where the copy lives.
+
+2. **Why should you create a new branch before editing, even in your own fork?**  
+   How does this help keep your work clean and modular?
+
+3. **What happens when you push changes to your fork, but the original repository has changed in the meantime?**  
+   How can you make sure your pull request will not cause merge conflicts?
+
+4. **How can you update your fork to reflect changes from the upstream repository?**  
+   Try to describe the purpose of `git remote add upstream` and `git fetch`.
+
+5. **Why do open-source maintainers prefer contributions via pull requests rather than giving direct write access?**  
+   Think in terms of trust, control, and quality assurance.
+
+6. **What information should a good pull request contain?**  
+   Consider both the technical and the social aspects (e.g., commit message, explanation, tone).
+
 
 ## 4) Advice
-While GitHub is commonly used, GitLab is also quite popular (and your university might provide you with a self-hosted option). When trying to understand GIt and GitHub, always think about what is Git and what is GitHub. Anything that can't be accomplished by doing `git <command> [whatever]` is most likely a GitHub feature. 
 
+Contributing via forks and pull requests is the foundation of open source development. It allows for **distributed, asynchronous collaboration** without compromising the integrity of the original project. The workflow you practiced here is not just a technical necessity — it reflects values like transparency, discussion, and collective improvement.
+
+Every contribution, no matter how small, is a chance to learn, communicate, and shape software that others depend on. Start small, be kind in your messages, and don’t be afraid to open that first pull request — it's how everyone begins.
