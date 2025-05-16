@@ -35,7 +35,7 @@ In essence, GitHub turns Git's decentralized architecture into a global collabor
 
 1. **Explore the STEMgraph Organization on GitHub**  
    Visit the public repositories of the STEMgraph organization:  
-   👉 [https://github.com/STEMgraph/repositories](https://github.com/STEMgraph/repositories)  
+   👉 [https://github.com/orgs/STEMgraph/repositories](https://github.com/orgs/STEMgraph/repositories)  
    Browse the available projects and pick one that:
    - contains a small bug (e.g. a typo or logical mistake),
    - could benefit from an enhancement (e.g. clearer instructions or additional explanation), or
