@@ -112,20 +112,35 @@ git merge upstream/main
 1. **What is the difference between a GitHub fork and a local Git clone?**  
    Hint: Think about ownership, visibility, and where the copy lives.
 
+  Github Fork is a public copy of the original repo on github with pull
+
 2. **Why should you create a new branch before editing, even in your own fork?**  
    How does this help keep your work clean and modular?
+
+Keeps your changes scoped to a single feature, clean history, parallel development
 
 3. **What happens when you push changes to your fork, but the original repository has changed in the meantime?**  
    How can you make sure your pull request will not cause merge conflicts?
 
+  GitHub will attempt to auto-merge. If the same lines changed, you got a merge conflict
+
 4. **How can you update your fork to reflect changes from the upstream repository?**  
    Try to describe the purpose of `git remote add upstream` and `git fetch`.
+
+"git remote add upstream" lets Git know there’s another repo to track.
+"git fetch" pulls down the new data, but lets you choose when and how to integrate it.
 
 5. **Why do open-source maintainers prefer contributions via pull requests rather than giving direct write access?**  
    Think in terms of trust, control, and quality assurance.
 
+  reducing risk of accidental or malicious changes, 
+
 6. **What information should a good pull request contain?**  
    Consider both the technical and the social aspects (e.g., commit message, explanation, tone).
+
+Clear and concise summary of what the Pull Request does.
+What changes are made. Why, where, (maybe) how.
+respectful and collaborative.
 
 
 ## 4) Advice
